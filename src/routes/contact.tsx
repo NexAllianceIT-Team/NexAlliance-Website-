@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Mail, Phone, MapPin, Linkedin } from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
 import { toast } from "sonner";
 
 export const Route = createFileRoute("/contact")({
@@ -21,12 +21,6 @@ export const Route = createFileRoute("/contact")({
   }),
   component: Contact,
 });
-
-const founders = [
-  { name: "Maulik Chudasama", role: "Co-Founder & Business Development Executive", phone: "+91 63511 98511", initials: "MC", grad: "linear-gradient(135deg,#1e3a8a,#3b82f6)" },
-  { name: "Meet Mistry", role: "Co-Founder & Head of Sales", phone: "+91 77789 66277", initials: "MM", grad: "linear-gradient(135deg,#0c2340,#5cbdb9)" },
-  { name: "Sanket Pithava", role: "Co-Founder & Tech Manager", phone: "+91 83205 41447", initials: "SP", grad: "linear-gradient(135deg,#1a1a2e,#4f46e5)" },
-];
 
 function Contact() {
   const [submitting, setSubmitting] = useState(false);
@@ -80,17 +74,17 @@ function Contact() {
 
         <Reveal delay={100} className="lg:col-span-2 space-y-5">
           <div className="rounded-2xl border border-border bg-card p-5 sm:p-7">
-            <h3 className="font-semibold">NexAlliance HQ</h3>
+            <h3 className="font-semibold">NexAlliance</h3>
             <ul className="mt-4 space-y-3 text-sm text-muted-foreground">
               <li className="flex gap-3"><MapPin className="size-4 mt-0.5 shrink-0 text-primary" /><span>Dhwarkesh Society, 35, Lajamni Chowk, Near Raghuveer Shoppers, Mota Varachha, Surat, Gujarat 394101</span></li>
-              <li className="flex gap-3"><Phone className="size-4 shrink-0 text-primary" /><span>+91 63511 98511</span></li>
+              <li className="flex gap-3"><Phone className="size-4 shrink-0 text-primary" /><span>+91 63511 78511</span></li>
               <li className="flex gap-3"><Mail className="size-4 shrink-0 text-primary" /><span>info@nexalliance.com</span></li>
             </ul>
           </div>
           <div className="relative rounded-2xl overflow-hidden border border-border backdrop-blur-md bg-card/40 shadow-[var(--shadow-elegant)]">
             <div className="absolute -inset-px rounded-2xl pointer-events-none" style={{ background: "var(--gradient-brand)", opacity: 0.25, mask: "linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0)", WebkitMask: "linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0)", WebkitMaskComposite: "xor", maskComposite: "exclude", padding: "1px" }} />
             <iframe
-              title="NexAlliance HQ — Surat, Gujarat"
+              title="NexAlliance — Surat, Gujarat"
               src="https://www.google.com/maps?q=Dhwarkesh+Society+35+Lajamni+Chowk+Mota+Varachha+Surat+Gujarat+394101&output=embed"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
@@ -118,31 +112,6 @@ function Contact() {
         </Reveal>
       </section>
 
-      <section className="mx-auto max-w-7xl px-4 sm:px-6 py-16 sm:py-20">
-        <Reveal>
-          <div className="text-sm uppercase tracking-widest text-muted-foreground">Leadership</div>
-          <h2 className="mt-3 text-3xl md:text-4xl font-semibold tracking-tight">Talk directly to a founder.</h2>
-        </Reveal>
-        <div className="mt-8 sm:mt-10 grid sm:grid-cols-2 md:grid-cols-3 gap-5">
-          {founders.map((f, i) => (
-            <Reveal key={f.name} delay={i * 100}>
-              <div className="group gradient-border p-5 sm:p-7 h-full transition-transform hover:-translate-y-1">
-                <div className="aspect-square w-full rounded-xl grid place-items-center text-primary-foreground text-4xl font-semibold" style={{ background: f.grad }}>
-                  {f.initials}
-                </div>
-                <div className="mt-5 font-semibold text-lg">{f.name}</div>
-                <div className="text-sm text-muted-foreground">{f.role}</div>
-                <div className="mt-4 flex items-center justify-between">
-                  <a href={`tel:${f.phone.replace(/\s/g, "")}`} className="text-sm font-medium text-primary hover:underline">{f.phone}</a>
-                  <a href="#" className="grid place-items-center size-9 rounded-md border border-border hover:bg-accent transition-colors" aria-label="LinkedIn">
-                    <Linkedin className="size-4" />
-                  </a>
-                </div>
-              </div>
-            </Reveal>
-          ))}
-        </div>
-      </section>
     </>
   );
 }

@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Mail, Phone, MapPin, Linkedin, Twitter, Github } from "lucide-react";
+import { Mail, Phone, MapPin, Linkedin, Instagram, Facebook } from "lucide-react";
 import { Logo } from "./Logo";
 import { services } from "@/lib/services-data";
 
@@ -19,8 +19,12 @@ export function SiteFooter() {
             Enterprise-grade technology consulting. We design, build and scale digital ecosystems for ambitious teams worldwide.
           </p>
           <div className="flex gap-2 pt-2">
-            {[Linkedin, Twitter, Github].map((Icon, i) => (
-              <a key={i} href="#" className="grid place-items-center size-9 rounded-md border border-border hover:bg-accent transition-colors">
+            {[
+              { Icon: Linkedin, href: "https://www.linkedin.com/company/nexalliance", label: "LinkedIn" },
+              { Icon: Instagram, href: "#", label: "Instagram" },
+              { Icon: Facebook, href: "#", label: "Facebook" },
+            ].map(({ Icon, href, label }) => (
+              <a key={label} href={href} target={href !== "#" ? "_blank" : undefined} rel={href !== "#" ? "noreferrer" : undefined} className="grid place-items-center size-9 rounded-md border border-border hover:bg-accent transition-colors" aria-label={label}>
                 <Icon className="size-4" />
               </a>
             ))}
@@ -49,7 +53,7 @@ export function SiteFooter() {
           <h4 className="text-sm font-semibold mb-4">Get in touch</h4>
           <ul className="space-y-3 text-sm text-muted-foreground">
             <li className="flex gap-3"><MapPin className="size-4 shrink-0 mt-0.5" /><span>Dhwarkesh Society, 35, Lajamni Chowk, Mota Varachha, Surat, Gujarat 394101</span></li>
-            <li className="flex gap-3"><Phone className="size-4 shrink-0" /><span>+91 63511 511</span></li>
+            <li className="flex gap-3"><Phone className="size-4 shrink-0" /><span>+91 63511 78511</span></li>
             <li className="flex gap-3"><Mail className="size-4 shrink-0" /><span>info@nexalliance.com</span></li>
           </ul>
         </div>

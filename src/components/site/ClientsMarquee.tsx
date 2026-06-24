@@ -1,16 +1,16 @@
 const CLIENTS = [
-  "TATA Digital",
-  "Reliance Jio",
-  "Mahindra",
-  "HDFC Bank",
-  "Adani Group",
-  "Infosys",
-  "Zomato",
-  "Razorpay",
-  "Swiggy",
-  "Paytm",
-  "Freshworks",
-  "BYJU'S",
+  "Hillton",
+  "Modulite-Interiors",
+  "Novva-Salon",
+  "Harbole Entertaiment",
+  "Bihar Disaster Mangement System",
+  "Dotteds",
+  "Arkstone Reality",
+  "Luxbury Propties",
+  "Vsqure Nuro Spine",
+  "Ilyndra",
+  "Brand Box Clothing",
+  "Vrani Chemicals"
 ];
 
 export function ClientsMarquee() {
@@ -31,7 +31,7 @@ export function ClientsMarquee() {
             "linear-gradient(to right, transparent, black 12%, black 88%, transparent)",
         }}
       >
-        <div className="flex w-max gap-8 sm:gap-14 animate-marquee group-hover:[animation-play-state:paused]">
+        <div className="flex w-max gap-8 sm:gap-14 animate-marquee will-change-transform group-hover:[animation-play-state:paused]">
           {items.map((name, i) => (
             <span
               key={`${name}-${i}`}

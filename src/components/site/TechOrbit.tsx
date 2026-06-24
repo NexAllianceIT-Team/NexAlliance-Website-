@@ -55,7 +55,7 @@ export function TechOrbit() {
                 <motion.span
                   animate={{ y: [0, -6, 0] }}
                   transition={{ duration: 4 + (i % 3), repeat: Infinity, delay: i * 0.2 }}
-                  className="block rounded-full border border-white/10 bg-white/5 backdrop-blur px-2 sm:px-3 py-1 sm:py-1.5 text-[10px] sm:text-xs whitespace-nowrap text-foreground/80"
+                  className="block rounded-full border border-white/10 bg-black/40 backdrop-blur-sm px-2 sm:px-3 py-1 sm:py-1.5 text-[10px] sm:text-xs whitespace-nowrap text-foreground/80 will-change-transform"
                 >
                   {t}
                 </motion.span>

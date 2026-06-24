@@ -31,11 +31,11 @@ export function HeroImmersive() {
         <AnimatePresence mode="wait">
           <motion.span
             key={MORPH[morphIdx]}
-            initial={{ opacity: 0, scale: 0.92, filter: "blur(20px)" }}
+            initial={{ opacity: 0, scale: 0.92, filter: "blur(12px)" }}
             animate={{ opacity: 0.06, scale: 1, filter: "blur(0px)" }}
-            exit={{ opacity: 0, scale: 1.05, filter: "blur(24px)" }}
+            exit={{ opacity: 0, scale: 1.05, filter: "blur(16px)" }}
             transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-            className="text-[40vw] sm:text-[32vw] md:text-[28vw] leading-none font-bold tracking-tighter text-foreground select-none whitespace-nowrap"
+            className="text-[40vw] sm:text-[32vw] md:text-[28vw] leading-none font-bold tracking-tighter text-foreground select-none whitespace-nowrap will-change-[transform,opacity]"
           >
             {MORPH[morphIdx]}
           </motion.span>
@@ -76,11 +76,11 @@ export function HeroImmersive() {
               <AnimatePresence mode="wait">
                 <motion.span
                   key={ROTATE[idx]}
-                  initial={{ y: 24, opacity: 0, filter: "blur(8px)" }}
+                  initial={{ y: 24, opacity: 0, filter: "blur(4px)" }}
                   animate={{ y: 0, opacity: 1, filter: "blur(0px)" }}
-                  exit={{ y: -24, opacity: 0, filter: "blur(8px)" }}
+                  exit={{ y: -24, opacity: 0, filter: "blur(4px)" }}
                   transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
-                  className="inline-block gradient-text font-semibold"
+                  className="inline-block gradient-text font-semibold will-change-[transform,opacity]"
                 >
                   {ROTATE[idx]}
                 </motion.span>

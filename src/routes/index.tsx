@@ -3,7 +3,6 @@ import { HeroImmersive } from "@/components/site/HeroImmersive";
 import { ManifestoSection } from "@/components/site/ManifestoSection";
 import { ServicesScroll } from "@/components/site/ServicesScroll";
 import { TimelineSection } from "@/components/site/TimelineSection";
-import { FoundersSection } from "@/components/site/FoundersSection";
 import { TechOrbit } from "@/components/site/TechOrbit";
 import { CtaFinal } from "@/components/site/CtaFinal";
 import { ClientsMarquee } from "@/components/site/ClientsMarquee";
@@ -29,7 +28,6 @@ function Index() {
       <ManifestoSection />
       <ServicesScroll />
       <TimelineSection />
-      <FoundersSection />
       <TechOrbit />
       <FAQSection />
       <CtaFinal />

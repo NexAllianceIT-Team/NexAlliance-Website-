@@ -5,6 +5,7 @@ import { Counter } from "@/components/site/Counter";
 import { Compass, Target, Heart, Sparkles } from "lucide-react";
 import { CtaBand } from "@/components/site/ServicePageTemplate";
 import { Button } from "@/components/ui/button";
+import { FoundersSection } from "@/components/site/FoundersSection";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -108,6 +109,7 @@ function About() {
         </div>
       </section>
 
+      <FoundersSection />
       <CtaBand />
     </>
   );
