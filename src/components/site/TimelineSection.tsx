@@ -2,7 +2,7 @@ import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 const STEPS = [
-  { year: "2026", title: "The Beginning", desc: "Three founders. One conviction: software should feel inevitable." },
+  { year: "2026", title: "The Beginning", desc: "Two founders. One conviction: software should feel inevitable." },
   { year: "Q2", title: "First Clients", desc: "Early ERP & CRM rollouts. Word-of-mouth becomes pipeline." },
   { year: "Q3", title: "Building Products", desc: "In-house platforms for retail, healthcare, and manufacturing." },
   { year: "Q4", title: "Growing the Team", desc: "Senior engineers, designers, and growth specialists across Surat." },

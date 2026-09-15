@@ -1,32 +1,31 @@
 import { motion } from "framer-motion";
 
 const FOUNDERS = [
-  { name: "Maulik Chudasama", role: "Co-Founder · Business Development Executive", bio: "Building strategic partnerships, driving growth, and creating opportunities that turn ideas into business success.", image: "/assets/maulik_founder.jpeg" },
   { name: "Meet Mistry", role: "Co-Founder · Head of Sales", bio: "Driving revenue growth through client relationships, market expansion, and result-oriented sales strategies.", image: "/assets/meet_founder.jpeg" },
   { name: "Sanket Pithava", role: "Co-Founder · Head Of Technology", bio: "Leading technology innovation and transforming complex business requirements into scalable digital solutions.", image: "/assets/sanket_founder.jpeg" },
 ];
 
 export function FoundersSection() {
   return (
-    <section className="relative py-16 sm:py-20 md:py-24 px-4 sm:px-6 overflow-hidden">
+    <section className="relative py-12 sm:py-16 px-4 sm:px-6 overflow-hidden">
       <div className="absolute inset-0 pointer-events-none" style={{ background: "var(--gradient-glow)" }} />
-      <div className="relative mx-auto max-w-7xl">
-        <div className="max-w-2xl mb-16 sm:mb-24">
+      <div className="relative mx-auto max-w-3xl">
+        <div className="mb-10 sm:mb-12 text-center">
           <div className="text-xs uppercase tracking-[0.3em] text-accent">Leadership</div>
-          <h2 className="mt-4 text-4xl sm:text-5xl md:text-7xl font-bold tracking-tighter">
+          <h2 className="mt-3 text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter">
             The people behind <span className="gradient-text">the build.</span>
           </h2>
         </div>
 
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
+        <div className="grid sm:grid-cols-2 gap-5 sm:gap-6">
           {FOUNDERS.map((f, i) => (
             <motion.article
               key={f.name}
-              initial={{ opacity: 0, y: 60 }}
+              initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-15%" }}
-              transition={{ duration: 0.9, delay: i * 0.12, ease: [0.16, 1, 0.3, 1] }}
-              className="group relative aspect-[3/4] overflow-hidden rounded-3xl border border-white/10 bg-card"
+              viewport={{ once: true, margin: "-10%" }}
+              transition={{ duration: 0.8, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] }}
+              className="group relative aspect-[4/5] overflow-hidden rounded-2xl border border-white/10 bg-card"
             >
               {/* Portrait surface */}
               <div
@@ -39,7 +38,7 @@ export function FoundersSection() {
               />
               {/* particles */}
               <div className="absolute inset-0 opacity-60">
-                {Array.from({ length: 8 }).map((_, k) => (
+                {Array.from({ length: 6 }).map((_, k) => (
                   <span
                     key={k}
                     className="absolute size-1 rounded-full bg-white/40 animate-float will-change-transform"
@@ -59,7 +58,7 @@ export function FoundersSection() {
                   <img src={f.image} alt={f.name} className="absolute inset-0 w-full h-full object-cover transition-transform duration-[1200ms] group-hover:scale-105 will-change-transform" />
                 ) : (
                   <div className="absolute inset-0 grid place-items-center">
-                    <span className="text-[12rem] sm:text-[14rem] md:text-[18rem] font-bold leading-none text-white/5 select-none">
+                    <span className="text-[10rem] font-bold leading-none text-white/5 select-none">
                       {f.name[0]}
                     </span>
                   </div>
@@ -67,10 +66,10 @@ export function FoundersSection() {
               </div>
 
               {/* Glass content */}
-              <div className="absolute inset-x-3 sm:inset-x-4 bottom-3 sm:bottom-4 rounded-2xl border border-white/10 bg-black/40 backdrop-blur-sm p-4 sm:p-6 text-white will-change-transform">
-                <div className="text-[10px] sm:text-xs uppercase tracking-[0.25em] text-white/80">{f.role}</div>
-                <h3 className="mt-2 text-xl font-bold tracking-tight text-white">{f.name}</h3>
-                <p className="mt-3 text-sm text-white/70">{f.bio}</p>
+              <div className="absolute inset-x-2.5 bottom-2.5 rounded-xl border border-white/10 bg-black/50 backdrop-blur-md p-3.5 sm:p-4 text-white will-change-transform">
+                <div className="text-[10px] uppercase tracking-[0.2em] text-white/80">{f.role}</div>
+                <h3 className="mt-1 text-base sm:text-lg font-bold tracking-tight text-white">{f.name}</h3>
+                <p className="mt-1.5 text-xs text-white/75 leading-relaxed">{f.bio}</p>
               </div>
             </motion.article>
           ))}
